@@ -1,0 +1,9 @@
+**/Session.vim
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.ps
+paper.out
+paper.pdf

@@ -1,0 +1,124 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix}
+\usepackage{amsmath}
+\usepackage{verbatim} % for \begin{comment}
+% figures
+%\usepackage{stfloats} % allow figure* at bottom of page
+\usepackage{subcaption} % for subfigure
+\usepackage{cleveref} % for section symbol
+\usepackage{epsfig} % to set graphics path
+\graphicspath{{./figures/}}
+
+% so urls in bib are broken to fit on line
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+% not sure why this is needed but it fixes build sometimes
+\addtolength{\textheight}{\topskip}
+
+%\input{cmds}
+% for comments
+\newcommand{\ada}[1]{\textcolor{red}{AG: #1}}
+\newcommand{\ketan}[1]{\textcolor{blue}{KB: #1}}
+\newcommand{\jim}[1]{\textcolor{green}{JC: #1}}
+%\newcommand{\ada}[1]{}
+%\newcommand{\ketan}[1]{}
+%\newcommand{\jim}[1]{}
+
+% tight bullets
+\newenvironment{tightitemize}%
+ {\begin{list}{$\bullet$}{%
+        \setlength{\leftmargin}{10pt}
+        \setlength{\itemsep}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\topsep}{0pt}%
+        \setlength{\parskip}{0pt}%
+        }%
+ }%
+{\end{list}}
+\newcounter{tecounter}
+\newenvironment{tightenumerate}%
+ {\begin{list}{\arabic{tecounter}.}{%
+        \usecounter{tecounter}
+        \setlength{\leftmargin}{10pt}
+        \setlength{\itemsep}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\topsep}{0pt}%
+        \setlength{\parskip}{0pt}%
+        }%
+ }%
+{\end{list}}%
+
+% tight equations
+\newenvironment{tightequation}%
+ {\begin{list}{}{%
+        \setlength{\leftmargin}{10pt}
+        \setlength{\itemsep}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\topsep}{5pt}%
+        \setlength{\parskip}{0pt}%
+        }%
+ }%
+{\end{list}}%
+
+% set up section references for cleveref
+\crefformat{section}{\S#2#1#3} % see manual of cleveref, section 8.2.1
+\crefformat{subsection}{\S#2#1#3}
+\crefformat{subsubsection}{\S#2#1#3}
+
+\begin{document}
+
+%don't want date printed
+\date{}
+
+%make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf PT: Paper Template}
+
+\author{
+  {\rm James Choncholas}\\
+  Georgia Institute of Technology\\
+  jchoncholas3@gatech.edu
+  \and
+  {\rm Ketan Bhardwaj}\\
+  Georgia Institute of Technology\\
+  ketanbj@gatech.edu
+  \and
+  {\rm Ada Gavrilovska}\\
+  Georgia Institute of Technology\\
+  ada@cc.gatech.edu
+}
+
+\maketitle
+
+% suppress page numbers.
+%\thispagestyle{empty}
+
+
+\subsection*{Abstract}
+We suggest an architecture for a system.
+\cite{satyanarayanan1990coda}
+
+% This is how you write under\_bar
+% This is \textbf{bold}
+% This is \underline{underlined}
+% This is \textbf{\textit{bold and italics}}.
+
+
+% Tips in the following sections from Jennifer Widom
+% from stanford https://cs.stanford.edu/people/widom/paper-writing.html
+\input{sections/intro.tex}
+\input{sections/prelim.tex}
+\input{sections/overview.tex}
+\input{sections/design.tex}
+\input{sections/eval.tex}
+\input{sections/relatedwork.tex}
+\input{sections/conclusion.tex}
+\input{sections/future.tex}
+%\input{sections/acks.tex}
+
+
+\bibliographystyle{plain}
+\bibliography{paper}
+
+\end{document}
+

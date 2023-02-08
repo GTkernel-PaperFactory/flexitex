@@ -1,0 +1,49 @@
+{
+  //"latex-workshop.latex.recipe.default": "pdflatex -> bibtex -> pdflatex * 2",
+  "latex-workshop.latex.recipe.default": "make",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "make",
+      "command": "make",
+      "args": [],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+      //{"TEXINPUTS": ".:./popets/:"}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "make",
+      "tools": [
+        "make"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex * 2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ]
+}
