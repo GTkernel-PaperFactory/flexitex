@@ -7,3 +7,6 @@
 *.ps
 paper.out
 paper.pdf
+paper.synctex.gz
+paper.fdb_latexmk
+paper.fls

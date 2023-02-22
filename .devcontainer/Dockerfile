@@ -2,7 +2,7 @@ FROM ubuntu:jammy
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
-    texlive-extra-utils chktex git make \
+    texlive-extra-utils chktex git make latexmk \
     && rm -rf /var/lib/apt/lists/*
 
 ARG USERNAME=user

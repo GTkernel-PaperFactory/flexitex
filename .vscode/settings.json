@@ -1,6 +1,5 @@
 {
-  //"latex-workshop.latex.recipe.default": "pdflatex -> bibtex -> pdflatex * 2",
-  "latex-workshop.latex.recipe.default": "make",
+  "latex-workshop.latex.recipe.default": "latexmk",
   "latex-workshop.latex.tools": [
     {
       "name": "make",
@@ -9,24 +8,18 @@
       "env": {}
     },
     {
-      "name": "pdflatex",
-      "command": "pdflatex",
+      "name": "latexmk",
+      "command": "latexmk",
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
         "%DOC%"
       ],
-      "env": {}
-      //{"TEXINPUTS": ".:./popets/:"}
-    },
-    {
-      "name": "bibtex",
-      "command": "bibtex",
-      "args": [
-        "%DOCFILE%"
-      ],
-      "env": {}
+      // if you put style files in subdir:
+      //"env": {"TEXINPUTS": ".:./popets/:"}
     },
   ],
   "latex-workshop.latex.recipes": [
@@ -37,13 +30,10 @@
       ]
     },
     {
-      "name": "pdflatex -> bibtex -> pdflatex * 2",
+      "name": "latexmk",
       "tools": [
-        "pdflatex",
-        "bibtex",
-        "pdflatex",
-        "pdflatex"
-      ]
-    }
+        "latexmk"
+      ],
+    },
   ]
 }

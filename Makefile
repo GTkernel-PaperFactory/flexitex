@@ -7,6 +7,10 @@ BIBTEX = bibtex
 PROJECT = paper
 BIB_PROJECT = paper
 
+# if you put style files in subdir:
+#export TEXINPUTS = .:./popets/:
+# (note no quotes)
+
 VERBOSE	?= 0
 ifeq ($(VERBOSE), 0)
 	QUIET=@
