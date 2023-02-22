@@ -17,8 +17,8 @@
   "customizations": {
   	"vscode": {
   		"extensions": [
-  			"mathematic.vscode-latex",
-  			"James-Yu.latex-workshop"
+  			"James-Yu.latex-workshop",
+			  "valentjn.vscode-ltex"
   		]
 	  }
   }
