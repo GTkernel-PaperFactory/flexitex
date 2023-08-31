@@ -17,8 +17,10 @@
   "customizations": {
   	"vscode": {
   		"extensions": [
+			  "mathematic.vscode-latex",
   			"James-Yu.latex-workshop",
-			  "valentjn.vscode-ltex"
+			  "valentjn.vscode-ltex",
+			  "GitHub.copilot"
   		]
 	  }
   }

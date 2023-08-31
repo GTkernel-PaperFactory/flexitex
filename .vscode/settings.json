@@ -18,8 +18,10 @@
         "-outdir=%OUTDIR%",
         "%DOC%"
       ],
-      // if you put style files in subdir:
-      //"env": {"TEXINPUTS": ".:./popets/:"}
+      "env": {
+        "TEXINPUTS": ".:./styles/:",
+        "BSTINPUTS": ".:./styles/:"
+      }
     },
   ],
   "latex-workshop.latex.recipes": [
@@ -35,5 +37,9 @@
         "latexmk"
       ],
     },
-  ]
+  ],
+  "editor.formatOnSave": true,
+  "[latex]": {
+    "editor.defaultFormatter": "mathematic.vscode-latex"
+  }
 }

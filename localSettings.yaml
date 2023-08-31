@@ -1,0 +1,63 @@
+# Settings for the latex code fomatter latexindent.pl
+# Reference file can be found at:
+# https://github.com/cmhughes/latexindent.pl/blob/main/defaultSettings.yaml
+
+# default value of indentation
+defaultIndent: "  "
+
+# remove trailing whitespace from all lines
+removeTrailingWhitespace:
+    beforeProcessing: 0
+    afterProcessing: 1
+
+# change dos line breaks into unix
+dos2unixlinebreaks: 1
+
+# lookForAlignDelims:
+#   tabular: 
+#      delims: 1
+#      alignDoubleBackSlash: 0
+#      spacesBeforeDoubleBackSlash: 1
+#      multiColumnGrouping: 0
+#      alignRowsWithoutMaxDelims: 0
+#      spacesBeforeAmpersand: 1
+#      spacesAfterAmpersand: 1
+#      justification: "right"
+
+modifyLineBreaks:
+    #preserveBlankLines: 0                   # 0/1
+    condenseMultipleBlankLinesInto: 1       # 0/1
+    oneSentencePerLine:
+        manipulateSentences: 1              # 0/1
+        removeSentenceLineBreaks: 1         # 0/1
+        textWrapSentences: 1
+        multipleSpacesToSingle: 1           # 0/1
+    textWrapOptions:
+        columns: 80
+    environments:                           
+        BeginStartsOnOwnLine: 1             # -1,0,1,2,3,4
+        BodyStartsOnOwnLine: 1              # -1,0,1,2,3,4
+        EndStartsOnOwnLine: 1               # -1,0,1,2,3,4
+        EndFinishesWithLineBreak: 1         # -1,0,1,2,3,4
+        equation:
+            BeginStartsOnOwnLine: 1         # -1,0,1,2,3,4
+            BodyStartsOnOwnLine: 1          # -1,0,1,2,3,4
+            EndStartsOnOwnLine: 1           # -1,0,1,2,3,4
+            EndFinishesWithLineBreak: 1     # -1,0,1,2,3,4
+    commands:
+        label:
+            CommandStartsOnOwnLine: 1
+            CommandNameFinishesWithLineBreak: 1
+noIndentBlock:
+    acmdoi:
+        begin: \\acmDOI\{
+        body: [^}]*?
+        end: \}
+    matrix:
+        begin: \\begin\{bmatrix\}
+        body: .*
+        end: \\end\{bmatrix\}
+    algorithm:
+        begin: \\begin\{algorithm\}
+        body: .*
+        end: \\end\{algorithm\}
