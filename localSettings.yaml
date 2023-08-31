@@ -46,7 +46,7 @@ modifyLineBreaks:
             EndFinishesWithLineBreak: 1     # -1,0,1,2,3,4
     commands:
         label:
-            CommandStartsOnOwnLine: 1
+            CommandStartsOnOwnLine: 0
             CommandNameFinishesWithLineBreak: 1
 noIndentBlock:
     acmdoi:

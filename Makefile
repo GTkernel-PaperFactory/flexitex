@@ -47,9 +47,10 @@ $(PROJECT).aux: $(PROJECT).tex
 
 deps: ## Install latex package dependencies. Requires sudo privileges.
 	$(QUIET)if [ -z "$(command -v xdg-open)" ]; then \
-		sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra; \
+		sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
+    texlive-extra-utils texlive-science chktex git make latexmk; \
 	else \
-		echo "install your OS equivalent of texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra"; \
+		echo "Your OS is not supported"; \
 	fi
 
 help: SHELL:=/bin/bash
