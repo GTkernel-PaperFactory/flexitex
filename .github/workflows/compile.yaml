@@ -18,8 +18,6 @@ jobs:
       with:
         packages: texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-extra-utils texlive-science chktex git make latexmk
         version: 1.0
-    - name: Install Dependencies
-      run: make deps
     - name: Compile LaTeX document
       run: make
     - name: Upload PDF file
