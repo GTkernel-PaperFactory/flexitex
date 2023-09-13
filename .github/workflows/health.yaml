@@ -19,7 +19,7 @@ jobs:
       id: lint
       with:
           root_file: paper.tex
-          args: --check en --dict .vscode/ltex.dictionary.en-US.txt
+          args: --check en --dict .vscode/ltex.dictionary.en-US.txt --read-all
     - name: Upload TeXtidote report
       uses: actions/upload-artifact@v2
       with:
