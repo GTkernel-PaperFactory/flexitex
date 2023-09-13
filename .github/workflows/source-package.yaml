@@ -1,0 +1,32 @@
+name: Source Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  package_source:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        cache: 'pip'
+    - name: Install arxiv_latex_cleaner
+      run: pip install arxiv_latex_cleaner
+    - name: Clean LaTeX source
+      run: arxiv_latex_cleaner ./
+
+    - name: Workaround actions/upload-artifact#176
+      run: |
+        echo "artifacts_path=$(realpath ..)" >> $GITHUB_ENV
+    - name: Upload zip of source files
+      uses: actions/upload-artifact@v3
+      with:
+          name: stripped_source
+          path: ${{ env.artifacts_path }}/*_arXiv/
