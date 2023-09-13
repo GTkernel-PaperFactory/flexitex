@@ -12,7 +12,7 @@ Features:
 - Build with GitHub 🏗️ cloud-based CI/CD.
   - Lint 🧹 on pushes and merges.
   - Health report 📋 to catch mistakes.
-  - Source packager 📑 strip comments and unused junk for arXiv or publication.
+  - Source packager 📑 strip comments and unreferenced files for publication.
 
 ## Getting Started
 Open this directory in vscode then click the popup (or manually run the command)
