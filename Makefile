@@ -48,7 +48,7 @@ $(PROJECT).aux: $(PROJECT).tex
 deps: ## Install latex package dependencies. Requires sudo privileges.
 	$(QUIET)if [ -z "$(command -v xdg-open)" ]; then \
 		sudo apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
-    texlive-extra-utils texlive-science chktex git make latexmk; \
+    texlive-extra-utils texlive-science chktex git make latexmk ghostscript; \
 	else \
 		echo "Your OS is not supported"; \
 	fi
