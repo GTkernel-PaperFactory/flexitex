@@ -21,7 +21,10 @@ jobs:
       run: pip install arxiv_latex_cleaner
     - name: Clean LaTeX source
       run: arxiv_latex_cleaner ./
-
+    - name: Remove unnecessary files
+      run: |
+        rm ../*_arXiv/Makefile \
+          ../*_arXiv/localSettings.yaml
     - name: Workaround actions/upload-artifact#176
       run: |
         echo "artifacts_path=$(realpath ..)" >> $GITHUB_ENV
