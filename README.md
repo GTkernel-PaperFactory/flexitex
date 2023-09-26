@@ -1,6 +1,6 @@
 # FlexiTeX: Flexible LaTeX Template ✍️
 [![Compile](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/compile.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/compile.yaml)
-[![Health](https://github.com/GTkernel-PaperFactoryflexitex/actions/workflows/health.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/health.yaml)
+[![Health](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/health.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/health.yaml)
 [![Lint](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/lint.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/lint.yaml)
 
 A forkable repository perfect for starting your next paper!
