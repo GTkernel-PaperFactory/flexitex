@@ -1,12 +1,15 @@
-# LaTeX Starter Pack ✍️
-[![Compile](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/compile.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/compile.yaml)
-[![Health](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/health.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/health.yaml)
-[![Lint](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/lint.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/vscode-latex-template/actions/workflows/lint.yaml)
+# FlexiTeX: Flexible LaTeX Template ✍️
+[![Compile](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/compile.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/compile.yaml)
+[![Health](https://github.com/GTkernel-PaperFactoryflexitex/actions/workflows/health.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/health.yaml)
+[![Lint](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/lint.yaml/badge.svg)](https://github.com/GTkernel-PaperFactory/flexitex/actions/workflows/lint.yaml)
 
+A forkable repository perfect for starting your next paper!
 
 Features:
+
+- 💪 Flexible! IEEE, ACM, and USENIX styles are included.
 - 🔤 Spell checker with custom dictionary.
-- ✅ Formatter runs automatically as you write.
+- ✅ Formatter and linter run automatically as you write.
 - 🧑‍✈️ Copilot helps you write.
 - 🫙 [Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers)
 = no LaTeX dependencies to install, just start writing.
