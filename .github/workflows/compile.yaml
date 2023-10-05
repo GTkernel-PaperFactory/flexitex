@@ -22,7 +22,7 @@ jobs:
         post_compile: |
           set -x &&
           pdftops paper.pdf paper.ps &&
-          gs -dPDFA -dBATCH -dNOPAUSE -dNOOUTERSAVE -sProcessColorModel=DeviceCMYK -sDEVICE=pdfwrite -sPDFACompatibilityPolicy=1 -sOutputFile=paper_a.pdf paper.ps &&
+          gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sColorConversionStrategy=UseDeviceIndependentColor -dEmbedAllFonts=true -dPrinted=true -dPDFA -sProcessColorModel=DeviceRGB -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages -r150 -dFastWebView=true -sOutputFile=paper_a.pdf paper.ps &&
           ls
       env:
         TEXINPUTS: ".:./styles/:"
