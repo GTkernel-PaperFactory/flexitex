@@ -4,6 +4,8 @@
 
 TEX = pdflatex
 BIBTEX = bibtex
+# Some styles (like gatechthesis) require biber instead of bibtex.
+# BIBTEX = biber
 PROJECT = paper
 BIB_PROJECT = paper
 
