@@ -18,10 +18,11 @@
         "-outdir=%OUTDIR%",
         "%DOC%"
       ],
-      "env": {
-        "TEXINPUTS": ".:./styles/:",
-        "BSTINPUTS": ".:./styles/:"
-      }
+      // If you put your styles in their own directory...
+      // "env": {
+      //   "TEXINPUTS": ".:./styles/:",
+      //   "BSTINPUTS": ".:./styles/:"
+      // }
     },
   ],
   "latex-workshop.latex.recipes": [
