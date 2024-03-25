@@ -10,3 +10,8 @@ paper.pdf
 paper.synctex.gz
 paper.fdb_latexmk
 paper.fls
+paper.acn
+paper.bcf
+paper.glo
+paper.ist
+paper.run.xml

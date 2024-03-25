@@ -1,8 +1,9 @@
 FROM ubuntu:jammy
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
-    texlive-extra-utils texlive-science chktex git make latexmk ghostscript \
+    texlive-latex-base texlive-fonts-recommended texlive-fonts-extra \
+    texlive-latex-extra texlive-extra-utils texlive-bibtex-extra \
+    texlive-science chktex git make latexmk ghostscript \
     python3 python-is-python3 python3-pip \
     && rm -rf /var/lib/apt/lists/* \
     && pip install --upgrade pip \
